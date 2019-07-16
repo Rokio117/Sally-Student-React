@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+</head>
+<body>
+  <section id="sally-student-resume"></section>
+
+  <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  
+<script type="text/babel">
+  function App(props) {
+    console.log(props)
+    return ([
+      <header>{props.children[0]}</header>,
+      <div>{props.children[7]}</div>,
+      <div>Education:
+      <ul>{props.children[1]}{props.children[2]}</ul>
+      </div>,
+      <div>Work Experience:
+      <ul>{props.children[3]}{props.children[4]}</ul>
+      </div>,
+      <address>
+        {props.children[5]}
+        {props.children[6]}
+      </address>,
+     
+     ]
+    );
+  }
+
+ReactDOM.render(
+  <App className='sally-student'>
+    <h1>Sally Sassafras</h1>
+    <li>North Eastern South Carolina State University</li>
+    <li>South East West Virginia North High School</li>
+    <li>Geroria Center of Performing arts</li>
+    <li>Little Rock School for gifted little rocks</li>
+    <a href="hillan02@gmail.com">Email</a>
+    <div>Phone: 555-444-3210</div>
+    <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg"></img>
+    </App>,
+  document.querySelector('#sally-student-resume')
+);
+</script>
+  </section>
+</body>
+</html>
